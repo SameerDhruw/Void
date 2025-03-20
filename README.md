@@ -100,7 +100,7 @@ Explanation of each parameter:
 | `timeToRestartAllAccounts`    | `number`           | `300`             | Time (in seconds) before the bot restarts all accounts.                           |
 | `howManyAccountsRunInOneTime` | `number`           | `100`             | Number of accounts running simultaneously.                                        |
 | `doTasks`                     | `boolean`          | `true`            | Enable/disable task execution (`false` means the bot won’t perform tasks).        |
-| `upgradeItems`                | `string`           | `true`            | Referral code (if available, the bot will use it when required).                  |
+| `upgradeItems`                | `boolean`           | `true`            | Enable/disable upgrade item execution (`false` means the bot won’t perform upgrade).                  |
 
 Would you like me to add instructions on how users can adjust `configs.json` based on their needs? 🚀
 
